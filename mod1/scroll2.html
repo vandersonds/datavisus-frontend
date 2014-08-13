@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sem título</title>
+
+
+<style type="text/css">
+    
+  /* Height & width for the container - The rest is done by the jQuery part. */
+  div[rel='scrollcontent1'] { width: 60%; height: 280px;}
+  
+  /* Basic CSS for the elements - If rel is "scrollcontent1", style its scrollbar by referring to ".scrollcontent-content", ".scrollcontent-bar", etc. */
+  .scrollcontent1-content { /* background: #eee; */ } /* for vertical content, no explicit width is required for inner DIV */
+  .scrollcontent1-bar { width: 11px; background: #fffeda; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .scrollcontent1-drag { background: #ad5134; border-radius: 4px; cursor: pointer; }
+  
+  div[rel='scrollcontent2'] { width: 300px; height: 300px; }
+  
+  /* Basic CSS for the elements - If rel is "scrollcontent2", style its scrollbar by referring to ".scrollcontent2-content", ".scrollcontent2-bar", etc. */
+  .scrollcontent2-content { width: 999px; } /* for horizontal content, width should be set to total width of all floated inner container elements */
+  .scrollcontent2-bar { height: 15px; background: #ccc; border-radius: 5px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .scrollcontent2-drag { background: #425a8a; border-radius: 5px; cursor: pointer; }
+  
+  /* Not needed elements */
+  #contentwrap { padding: 5px; border: 1px #444444 solid; display: block; width: 300px; border-radius: 10px; }
+  .scrollcontent1-content p, .scrollcontent2-content p {margin:0; padding:0}
+    
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="facescroll/2/jquery.mousewheel.min.js"></script>
+
+<!--<script src="slickcustomscroll.js">-->
+<script src="facescroll/2/slickcustomscroll.js">
+
+	/***********************************************
+	* Slick Custom Scrollbar script (c) Dynamic Drive (www.dynamicdrive.com)
+	* This notice MUST stay intact for legal use
+	* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+	***********************************************/
+
+</script>
+
+
+<script type="text/javascript">
+    
+    /*
+        Usage:
+            HTML: Insert your content into a DIV element with an unique rel="" attribute.
+                <div rel="the-unique-id"></div>
+            JAVASCRIPT: Direction either "vertical" or "horizontal".
+                $( "div[rel='the-unique-id']" ).customscroll( { direction: "vertical" } );
+            CSS: Basic width & height for the main DIV.
+                div[rel='scrollcontent1'] { width: 300px; height: 300px; }
+            The script creates:
+                .scrollcontent1-content
+                .scrollcontent1-bar
+                .scrollcontent1-drag
+                
+            Scrolling to:
+                The A HREF should have a rel attribute with the ID of the element that the script will scroll to on A HREF click.
+                    <p id="paragraph-1"><a href="#" rel="paragraph-1">Click to scroll...</a></p>
+    */
+    
+    $( document ).ready( function() {
+        $( "div[rel='scrollcontent1']" ).customscroll( { direction: "vertical" } );
+        $( "div[rel='scrollcontent2']" ).customscroll( { direction: "horizontal", bounce:0 } );
+    });
+    
+
+    
+</script>
+
+
+
+
+
+</head>
+
+<body>
+
+
+<!-- Simple: a DIV with a "rel" attribute. -->
+
+<h3>Demo #1: Vertical Scroll demo</h3>
+    
+<div rel="scrollcontent1">
+    <p id="paragraph-A"><b>Start of Paragraph A</b> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    <p id="paragraph-B"><b>Start of Paragraph B</b> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+</div>
+   
+<!-- Simple: a DIV with a "rel" attribute. -->
+
+<h3>Demo #2: Horizontal Scroll demo</h3>
+
+<div id="contentwrap">
+    <div rel="scrollcontent2">
+        <p style="width: 333px; float: left;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        <p style="width: 333px; float: left;" id="paragraph-E"><b>Start of Paragraph E</b>- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <p style="width: 333px; float: left;" id="paragraph-F"><b>Start of Paragraph F</b> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+    </div>
+</div>
+
+<p>
+    <a href="#" rel="paragraph-B" parent="scrollcontent1" onClick="return false">Go to Paragraph B within Demo #1</a><br>
+    <a href="#" rel="paragraph-E" parent="scrollcontent2" onClick="return false">Go to Paragraph E within Demo #2</a><br>
+    <a href="#" rel="paragraph-F" parent="scrollcontent2" onClick="return false">Go to Paragraph F within Demo #2</a><br>
+
+</p>
+
+
+</body>
+</html>
