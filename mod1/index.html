@@ -72,14 +72,14 @@
 						<a href="#" class="show-sidebar">
 						  <i class="fa fa-bars"></i>
 						</a>
-						<div id="search">
+						<!--<div id="search">
 							<input type="text" placeholder="pesquisar"/>
 							<i class="fa fa-search"></i>
-						</div>
+						</div>-->
 					</div>
 					<div class="col-xs-4 col-sm-8 top-panel-right">
 						<ul class="nav navbar-nav pull-right panel-menu">
-							<li class="hidden-xs">
+							<!--<li class="hidden-xs">
 								<a href="index.html" class="modal-link">
 									<i class="fa fa-bell"></i>
 									<span class="badge">7</span>
@@ -96,7 +96,7 @@
 									<i class="fa fa-envelope"></i>
 									<span class="badge">7</span>
 								</a>
-							</li>
+							</li>-->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle account" data-toggle="dropdown">
 									<div class="avatar">
@@ -161,8 +161,8 @@
 		<div id="sid6ebar-left" class="col-xs-2 col-sm-2">
 			<ul class="nav main-menu">
 				<li>
-					<a href="ajax/apresentacao.html" class="active ajax-link">
-						<i class="fa fa-dashboard"></i>
+					<a href="ajax/colecao.html" class="active ajax-link">
+						<i class="fa fa-video-camera"></i>
 						<span class="hidden-xs">Apresenta&ccedil;&atilde;o</span>
 					</a>
 				</li>
@@ -172,11 +172,12 @@
 						<span class="hidden-xs">Arquivo</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/charts_xcharts.html">Arquivo op&ccedil;&atilde;o 1</a></li>
-						<li><a class="ajax-link" href="ajax/charts_flot.html">Arquivo op&ccedil;&atilde;o 2</a></li>
-						<li><a class="ajax-link" href="ajax/charts_google.html">Arquivo op&ccedil;&atilde;o 3</a></li>
-						<li><a class="ajax-link" href="ajax/charts_morris.html">Arquivo op&ccedil;&atilde;o 4</a></li>
-						<li><a class="ajax-link" href="ajax/charts_coindesk.html">Arquivo op&ccedil;&atilde;o 5</a></li>
+						<li><a class="ajax-link" href="ajax/charts_xcharts.html">Criar novo</a></li>
+						<li><a class="ajax-link" href="ajax/abreExistente.html">Abrir existente</a></li>
+
+			<!--				<li><a class="ajax-link" href="ajax/charts_google.html">Exportar</a></li>
+					<li><a class="ajax-link" href="ajax/charts_morris.html">Arquivo op&ccedil;&atilde;o 4</a></li>
+						<li><a class="ajax-link" href="ajax/charts_coindesk.html">Arquivo op&ccedil;&atilde;o 5</a></li>-->
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -185,9 +186,10 @@
 						 <span class="hidden-xs">Editar</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/tables_simple.html">Editar op&ccedil;&atilde;o 1</a></li>
-						<li><a class="ajax-link" href="ajax/tables_datatables.html">Editar op&ccedil;&atilde;o 2</a></li>
-						<li><a class="ajax-link" href="ajax/tables_beauty.html">Editar op&ccedil;&atilde;o 3</a></li>
+						<li><a class="ajax-link" href="ajax/tables_simple.html">Atributo</a></li>
+						<li><a class="ajax-link" href="ajax/tables_datatables.html">Parâmentro</a></li>
+						<li><a class="ajax-link" href="ajax/series.html">S&eacute;ries</a></li>
+                        <li><a class="ajax-link" href="ajax/dados.html">Dados</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -196,9 +198,12 @@
 						 <span class="hidden-xs">Compartilhar</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/forms_elements.html">Compartilhar  op&ccedil;&atilde;o 1</a></li>
-						<li><a class="ajax-link" href="ajax/forms_layouts.html">Compartilhar op&ccedil;&atilde;o 2</a></li>
+						<li><a class="ajax-link" href="ajax/forms_elements.html">Dados</a></li>
+                        
+<!--						<li><a class="ajax-link" href="ajax/forms_layouts.html">Compartilhar op&ccedil;&atilde;o 2</a></li>
 						<li><a class="ajax-link" href="ajax/forms_file_uploader.html">Compartilhar op&ccedil;&atilde;o 3</a></li>
+                        -->
+                        
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -207,8 +212,10 @@
 						 <span class="hidden-xs">Ajudar</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/ui_grid.html">Ajudar op&ccedil;&atilde;o 1</a></li>
-				<!--	<li><a class="ajax-link" href="ajax/ui_buttons.html">Buttons</a></li>
+						<li><a class="ajax-link" href="ajax/ajuda.html">Pesquisa</a></li>
+				<!--
+                
+                	<li><a class="ajax-link" href="ajax/ui_buttons.html">Buttons</a></li>
 						<li><a class="ajax-link" href="ajax/ui_progressbars.html">Progress Bars</a></li>
 						<li><a class="ajax-link" href="ajax/ui_jquery-ui.html">Jquery UI</a></li>
 						<li><a class="ajax-link" href="ajax/ui_icons.html">Icons</a></li>-->
@@ -327,6 +334,28 @@
 					</ul>
 				</li>-->
 			</ul>
+            <hr>
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend><span style="color:#FFF">Dicas</span></legend>
+
+<!-- Textarea -->
+<div class="control-group">
+  <div class="controls">                     
+    <textarea id="textarea" style="width:99%; height:200px; font-family:Verdana, Geneva, sans-serif; font-size:11px;" name="textarea"  placeholder="digite aqui..."></textarea>
+  </div>
+</div>
+
+</fieldset>
+<div class="control-group"> 
+  <div class="controls text-center" >
+    <button id="button1id" name="button1id" class="btn btn-success">Enviar</button>
+    <button id="button2id" name="button2id" class="btn btn-danger">Limpar</button>
+  </div>
+</div>
+</form>            
 		</div>
         
         <div id="sidebar-left" style="background-color:#FFC;" class="col-xs-2 col-sm-2">Propriedades - coluna
